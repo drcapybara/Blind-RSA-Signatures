@@ -26,7 +26,7 @@ Consider the scenario where the challenger's random bit $\(b_i = 1\)$:
 
 **Challenger's Verification:**
 - The challenger verifies the equation $\(z_i^e \equiv v \cdot c_i \mod n\)$.
-- Here, $\(v = s^e \mod n\) and \(c_i = r_i^e \mod n\)$.
+- Here, $\(v = s^e \mod n\)$ and $\(c_i = r_i^e \mod n\)$.
 
 **Breakdown of the Verification Step:**
 1. On the left-hand side, $\((s \cdot r_i \mod n)^e\)$ simplifies to $\(s^e \cdot r_i^e \mod n\)$.
