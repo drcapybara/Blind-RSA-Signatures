@@ -1,7 +1,7 @@
 ## Zero-Knowledge protocol for RSA Signatures without revealing the message
 
 **Initial Setup:**
-- Alice's RSA public key is $\((n, e)\)$.
+- Alice's RSA public key is $\(n, e\)$.
 - The message $\(m\)$ is known only to the prover.
 
 **Prover Initialize:**
@@ -14,8 +14,8 @@
 2. **Challenger's Response:**
    - The challenger picks a random bit $\(b_i\)$ and sends it back to the prover.
 3. **Prover's Response Depending on $\(b_i\)$:**
-   - If \(b_i = 0\): The prover reveals $\(r_i\)$. The challenger verifies that \(r_i^e = c_i\).
-   - If \(b_i = 1\): The prover reveals $\(z_i = s \cdot r_i \mod n\)$. The challenger verifies that $\(z_i^e = v \cdot c_i \mod n\)$.
+   - If $\(b_i = 0\)$: The prover reveals $\(r_i\)$. The challenger verifies that $\(r_i^e = c_i\)$.
+   - If $\(b_i = 1\)$: The prover reveals $\(z_i = s \cdot r_i \mod n\)$. The challenger verifies that $\(z_i^e = v \cdot c_i \mod n\)$.
 
 ## Verification Step in the Zero-Knowledge Proof Protocol for RSA Signature
 
