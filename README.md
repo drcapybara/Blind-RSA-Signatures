@@ -1,4 +1,4 @@
-## Zero-Knowledge Proof Protocol for RSA Signature without Revealing the Message
+## Zero-Knowledge Protocol for RSA Signatures without revealing the message
 
 **Initial Setup:**
 - Alice's RSA public key is $\((n, e)\)$.
