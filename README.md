@@ -1,4 +1,4 @@
-## Zero-Knowledge protocol for RSA Signatures without revealing the message
+## Blind RSA Signatures
 
 **Initial Setup:**
 - Alice's RSA public key is $\(n, e\)$.
@@ -6,7 +6,7 @@
 
 **Prover Initialize:**
 - The prover knows a signature $\(s\)$ such that $\(s^e \equiv m \mod n\)$.
-- The prover encrypts the signature by computing $\(v = s^e \mod n\)$ and sends $\(v\)$ to the challenger.
+- The prover computes $\(v = s^e \mod n\)$ and sends $\(v\)$ to the challenger.
 
 **The ZK Proof Process (Repeated \(k\) Times):**
 1. **Prover's Randomization and Commitment:**
@@ -33,4 +33,3 @@ Consider the scenario where the challenger's random bit $\(b_i = 1\)$:
 2. On the right-hand side, $\((s^e \mod n) \cdot (r_i^e \mod n)\)$ also simplifies to $\(s^e \cdot r_i^e \mod n\)$.
 3. Therefore, both sides of the equation are equal, ensuring the consistency of the prover's claim.
 
-This step in the protocol ensures that the prover can demonstrate knowledge of the signature $\(s\)$ without revealing either the signature or the message $\(m\)$, adhering to the zero-knowledge property.
