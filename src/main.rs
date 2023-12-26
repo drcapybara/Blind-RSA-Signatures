@@ -34,7 +34,7 @@ fn main() {
 
         // Prover's response
         let z_i = dbg!(if b_i {
-            // Prover sends c_z_i = (s * r_i)^e (mod n)
+            // Prover sends c_z_i = (s * r_i) (mod n)
             (s.clone() * r_i.clone()) % &n
         } else {
             // Prover sends r_i
