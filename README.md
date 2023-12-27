@@ -1,4 +1,4 @@
-## Blind RSA Signatures
+## Blind RSA Signatures/Messages
 
 **Initial Setup:**
 - Alice's RSA public key is $\(n, e\)$.
