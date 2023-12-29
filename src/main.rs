@@ -8,8 +8,10 @@ fn main() {
     let private_key = RsaPrivateKey::new(&mut rng, bits).expect("failed to generate a key");
     let public_key = RsaPublicKey::from(&private_key);
 
+    // Message
+    let m = BigUint::from_bytes_be(message);
     let message = b"secret message";
-
+    
     // Alice's public key
     let e = dbg!(BigUint::from_bytes_be(public_key.e().to_bytes_be().as_slice()));
     let n = dbg!(BigUint::from_bytes_be(public_key.n().to_bytes_be().as_slice()));
@@ -46,7 +48,7 @@ fn main() {
             let c_z_i = dbg!(z_i.modpow(&e, &n));
             assert_eq!(
                 c_z_i,
-                dbg!((s.modpow(&e, &n) * c_i) % &n),
+                dbg!(m.clone() * c_i) % &n),
                 "Verification failed at iteration {}",
                 i
             );
